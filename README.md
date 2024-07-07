@@ -20,7 +20,12 @@
 
 `npm/yarn/bun install quality-prompts-js`
 
+_**Please note:** For all examples to work well, copy `env.example` to `.env` and set the `openai_api_key=OPEN_API_KEY` environment variable._
+
 ### 2. Write the components of your prompt:
+
+Example: [`quality-prompt.ts`](./examples/quality-prompt.ts)
+Run: `npm run example quality-prompt.ts`
 
 ```ts
 import { qualityPrompt } from "quality-prompts-js"
@@ -39,6 +44,10 @@ const prompt = qualityPrompt(
 
 ### 3. QualityPrompts searches and uses only the few-shot examples that are relevant to the user's query
 
+Example: [`few-shot.ts`](./examples/few-shot.ts)
+Run: `npm run example few-shot.ts`
+
+
 ```ts
 import { fewShot } from "quality-prompts-js"
 
@@ -54,6 +63,9 @@ const relevantExamples = await fewShot(
 
 ##### System2Attention
 Helps clarify the given context as an additinoal step before it's used to answer the question
+
+Example: [`system2attention.ts`](./examples/system2attention.ts)
+Run: `npm run example system2attention.ts`
 
 ```ts
 import { system2Attention } from "quality-prompts-js"
@@ -89,6 +101,9 @@ You will respond with a knowledge graph in the given JSON format:
 #### Tabular Chain of Thought Prompting
 Prompts the LLM to think step by step and write the step, process and result of each step in a markdown table.
 Significantly boosts accuracy in solving math problems.
+
+Example: [`tabular-chain-of-thought.ts`](./examples/tabular-chain-of-thought.ts)
+Run: `npm run example tabular-chain-of-thought.ts`
 
 ```ts
 import { tabularChainOfThoughtPrompting, qualityPrompt } from "quality-prompts-js"
