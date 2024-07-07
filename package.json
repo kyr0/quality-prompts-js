@@ -1,0 +1,39 @@
+{
+  "name": "quality-prompts-js",
+  "type": "module",
+  "version": "0.0.3",
+  "description": "Use and evaluate prompting techniques quickly. QualityPrompts implements 58 prompting techniques.",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
+  "exports": {
+    "require": {
+      "types": "./dist/index.d.cts",
+      "default": "./dist/index.cjs"
+    },
+    "import": {
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "scripts": {
+    "test": "vitest",
+    "example": "tsx ./scripts/run-example.ts",
+    "build": "pkgroll"
+  },
+  "files": ["dist", "README.md", "LICENSE", "package.json"],
+  "author": "Aron Homberg <info@aron-homberg.de>",
+  "license": "MIT",
+  "dependencies": {
+    "cross-llm": "^0.1.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.6.4",
+    "dotenv": "^16.4.5",
+    "pkgroll": "^2.1.1",
+    "spawn-please": "^3.0.0",
+    "tsx": "^4.16.2",
+    "typescript": "^5.0.0",
+    "vitest": "^1.6.0"
+  }
+}
